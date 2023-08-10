@@ -4,6 +4,10 @@
 
 Movies Lovers is a web application that allows users to search for movies, create and manage playlists, and add movies to those playlists. Users can register and log in to create their own playlists, both public and private. The app utilizes the OMDB API to retrieve movie information.
 
+## Deployed Link
+- Frontend (Currenty not deployed)
+- Backend: ![](https://shy-gray-butterfly-sock.cyclic.app/)
+
 ## Routes and Details
 
 - **Frontend**: The frontend of the application is built using HTML, CSS, and JavaScript. Users can search for movies using the OMDB API and interact with their playlists.
@@ -28,6 +32,22 @@ Movies Lovers is a web application that allows users to search for movies, creat
 
 - `POST /playlist/addMovie/:pid`: Add a movie to a playlist.
 - `DELETE /playlist/:pId/delete/:mId`: Delete a movie from a playlist.
+
+## Screenshots 
+- Index Page
+![](https://github.com/sumit9235/lean-run-8778/assets/119393513/3e811484-3e40-44b2-9065-4660d8d23ed5)
+
+- Login / Signup page
+  ![](https://github.com/sumit9235/lean-run-8778/assets/119393513/8f0b28b0-dbb6-4e4b-b843-c2a16162c05b)
+
+- Dashboard Page
+  ![](https://github.com/sumit9235/lean-run-8778/assets/119393513/4fab4fb4-4ef8-46da-a732-ada684884826)
+
+- Profile Page
+  ![](https://github.com/sumit9235/lean-run-8778/assets/119393513/257e692d-77bb-4fc5-8ea7-d5fd42a92cd0)
+
+
+
 
 ## Tech Stack
 
