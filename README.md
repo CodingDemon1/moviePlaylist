@@ -6,7 +6,7 @@ Movies Lovers is a web application that allows users to search for movies, creat
 
 ## Deployed Link
 - Frontend (Currenty not deployed)
-- Backend: ![Cyclic](https://shy-gray-butterfly-sock.cyclic.app/)
+- Backend: [Cyclic](https://shy-gray-butterfly-sock.cyclic.app/)
 
 ## Routes and Details
 
