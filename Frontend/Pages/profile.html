@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/profile.css">
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <title>Profile | Movie Lovers</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">
+                <img src="../Images/logo.png" alt="">
+            </a>
+
+            <div class="navBar">
+                <a href="./mainPage.html">
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="./profile.html">
+                    <h3>Profile</h3>
+                </a>
+            </div>
+
+            <div class="authBtn">
+                <h2 id="userName"></h2>
+                <button class="loginBtn" id="loginBtn">Login</button>
+                <button class="logoutBtn" id="logoutBtn">Logut</button>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="sideBar">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="image">
+            <hr>
+            <button id="editProfileBtn">EDIT PROFILE</button>
+            <button id="createBtn">CREATE PLAYLIST</button>
+            <button id="ShowOwnBtn">YOUR PLAYLISTS</button>
+            <button id="ShowOthersBtn">OTHERS PLAYLISTS</button>
+        </div>
+        <div class="mainContainer">
+            <div class="userPlaylist">
+                <h2><span id="playlistType"></span> Playlists</h2>
+                <div class="renderPlaylist" id="renderPlaylist">
+                    <div class="plCard">
+                        <div>
+                            <h3>Romance</h3>
+                            <p class="privatePL">Private</p>
+                        </div>
+                        <p>This is a Playlist.</p>
+                    </div>
+                    <div class="plCard">
+                        <div>
+                            <h3>Romance</h3>
+                            <p class="privatePL">Private</p>
+
+                        </div>
+                        <p>This is a Playlist.</p>
+                    </div>
+                    <div class="plCard">
+                        <div>
+                            <h3>Romance</h3>
+                            <p class="privatePL">Private</p>
+
+                        </div>
+                        <p>This is a Playlist.</p>
+                    </div>
+                    <div class="plCard">
+                        <div>
+                            <h3>Romance</h3>
+                            <p class="publicPL">Public</p>
+
+                        </div>
+                        <p>This is a Playlist.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="currPlaylist">
+                <h4>Current Playlist</h4>
+                <div id="renderMovies">
+                    <!-- All the movies of the current Playlist will render here -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal__wrapper" id="modal__wrapper">
+        <div class="modal__container" id="modal__container">
+            <form id="createPLForm" action="">
+                <h3>Create Playlist</h3>
+                <input type="text" placeholder="Title..." required>
+                <input type="text" placeholder="Description..." required>
+                <select name="isPrivate">
+                    <option value="">Select Playlist Type</option>
+                    <option value="True">Private</option>
+                    <option value="False">Public</option>
+                </select>
+                <input type="submit" value="Create">
+                <button id="closeBtn">Close</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        Made with <b>❤️</b> by a Proudly <b>Indian</b>
+    </footer>
+</body>
+<script src="../Scripts/profile.js"></script>
+
+</html>

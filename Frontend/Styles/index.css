@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    background-image: url(../Images/backgound.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav>img{
+    height: 100px;
+}
+
+header>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* --------------Text Animation css Starts------------ */
+.animated-text {
+    position: absolute;
+    margin-top: 100px;
+    right: 0;
+    transform: translateX(100%);
+    animation: slideLeft 16s linear infinite;
+}
+
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-250%);
+    }
+
+    
+}
+
+/* --------------Text Animation css ends------------ */
+
+/*  First Section */
+section.top-section{
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 2px 3px 15px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff2d;
+    backdrop-filter : blur(4px);
+}
+
+section.top-section>p{
+    text-align: justify;
+}
+
+#getStartedBtn{
+    padding: 10px 20px;
+    background: none;
+    border: 2px solid black;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border-radius: 12px;
+}
+#getStartedBtn:hover{
+    transform: scale(1.1);
+}
+/* -------------------------- */

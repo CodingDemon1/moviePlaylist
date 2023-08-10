@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/mainPage.css">
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <title>Dashboard | Movie Lovers</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">
+                <img src="../Images/logo.png" alt="">
+            </a>
+
+            <div class="navBar">
+                <a href="./mainPage.html">
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="./profile.html">
+                    <h3>Profile</h3>
+                </a>
+            </div>
+
+            <div class="authBtn">
+                <h2 id="userName"></h2>
+                <button class="loginBtn" id="loginBtn">Login</button>
+                <button class="logoutBtn" id="logoutBtn">Logut</button>
+
+            </div>
+        </nav>
+    </header>
+    <hr>
+    <section id="searchSection">
+        <form type="submit" class="searchDiv" id="searchMovie">
+            <input type="text" placeholder="Type a movie name...">
+            <input type="submit" value="search">
+        </form>
+    </section>
+    <section id="movieListSection">
+        <div class="preFetch" id="preFetch">
+            <h1 style="color: grey;">Your Movie will be Displayed here</h1>
+        </div>
+
+        <div class="mainContainer" id="mainContainer">
+            <!-- All Cards will Go here -->
+        </div>
+        <ul class="pagination" id="pagination">
+        </ul>
+    </section>
+
+    <!-- add playlist Modal -->
+    <div class="modal__wrapper" id="modal__wrapper">
+        <div class="modal__container" id="modal__container">
+            <h3 id="addMovieName"></h3>
+            <div id="listPL" class="listPL">
+                <!-- All User Playlist will render here -->
+
+
+            </div>
+            <button id="closeBtn">Close</button>
+        </div>
+    </div>
+    <hr>
+
+
+    <footer>
+        Made with <b>❤️</b> by a Proudly <b>Indian</b>
+    </footer>
+</body>
+<script src="../Scripts/mainPage.js"></script>
+
+</html>

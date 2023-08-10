@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            width: 100%;
+            max-width: 800px;
+            /* Adjust as needed */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 400px;
+            /* Adjust as needed */
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            position: absolute;
+            animation: slideAnimation 10s infinite;
+            /* Adjust timing as needed */
+        }
+
+        @keyframes slideAnimation {
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: translateX(0);
+            }
+
+            20%,
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slide active">
+            <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg"
+                alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w="
+                alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk="
+                alt="Slide 3">
+        </div>
+    </div>
+
+</body>
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(showSlide, 5000); // Change slide every 5 seconds
+
+</script>
+
+</html>

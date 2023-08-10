@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
+}
+
+
+
+body {
+    background-image: url(../Images/backgound.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
+    margin: 0;
+    padding: 0 20px;
+
+}
+
+.blurr{
+    filter: blur(10px);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    height: 100px;
+}
+
+header>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoutBtn,
+.loginBtn {
+
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin-left: 5px;
+}
+
+.logoutBtn {
+    background-color: rgb(147, 29, 8);
+}
+
+.loginBtn {
+    background-color: rgb(45, 140, 248);
+}
+
+.logoutBtn:hover,
+.loginBtn:hover {
+    color: rgb(217, 215, 215);
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+.logoutBtn:hover {
+    background-color: rgb(192, 62, 39);
+}
+
+.loginBtn:hover {
+    background-color: rgb(71, 150, 240);
+}
+
+.hideBtn {
+    display: none;
+}
+
+.authBtn {
+    display: flex;
+    align-items: center;
+}
+
+.authBtn h2 {
+    margin-right: 20px;
+    color: rgb(86, 20, 5);
+}
+
+.navBar {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.navBar a {
+    color: #3a3c9b;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.navBar a:hover {
+    color: #6a1dbc;
+    transform: scale(1.1);
+}
+
+
+/* <----- Main ------> */
+
+main{
+    height: 75vh;
+    background-color: #ffffff2d;
+    border-radius: 12px;
+    box-shadow: 2px 3px 15px grey;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: space-between;
+}
+.sideBar{
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid rgb(152, 145, 145);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.sideBar>img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+#createBtn,
+#editProfileBtn,
+#ShowOthersBtn,
+#ShowOwnBtn{
+    background:none;
+    border: none;
+    padding: 10px 20px;
+    /* font-size: large; */
+    font-weight: bold;
+    border-radius: 8px;
+    color: rgb(39, 62, 55);
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all .2s ease-in-out;
+    margin-top: 10px;
+    width: 200px;
+}
+#createBtn:hover,
+#editProfileBtn:hover,
+#ShowOthersBtn:hover,
+#ShowOwnBtn:hover
+{
+    transform: scale(1.1);
+    color: rgb(97, 125, 116);
+    box-shadow: 2px 2px 5px grey;
+}
+/* <-------------SideBar Ends----------> */
+
+/* <-------------Main container--------> */
+.mainContainer::-webkit-scrollbar {
+    width: 5px;
+}
+.mainContainer{
+    width: 80%;
+    margin: 12px ;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG) ;
+}
+
+.mainContainer::-webkit-scrollbar-thumb {
+    background-color: rgb(253, 227, 227);
+    border-radius: 6px;
+    /* border: 3px solid var(--scrollbarBG); */
+}
+.userPlaylist{
+    width: 80%;
+    margin: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.currPlaylist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-height: 5000px; */
+        
+}
+
+.renderPlaylist,#renderMovies{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+
+
+/* Playlist Card */
+
+.plCard {
+    width: 200px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px grey;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.plCard:hover{  
+    transform: scale(1.05);
+
+}
+.plCard>div {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plCard>div>h3,
+.plCard p {
+    margin: 0;
+}
+
+.plCard>div>p {
+    /* align-self: baseline; */
+    font-size: 10px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    /* font-weight: li; */
+    color: white;
+}
+.privatePL{
+    background-color: green;
+}
+.publicPL{
+    background-color: rgb(43, 43, 251);
+}
+
+.plCard .numOfMovie{
+    color:black;
+    background-color : grey;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    backdrop-filter: blur(8px);
+}
+/* <-----------------> */
+
+.othersUserId{
+    font-size: 8px;
+    align-self: flex-end ;
+    padding: 3px;
+    background-color: #706d6d22;
+    border-radius: 5px;
+    color: tomato;
+}
+
+/* <--------Movie Card----------> */
+.movieCard {
+    height: 350px;
+    width: 230px;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 5px grey;
+    backdrop-filter: blur(8px);
+    /* background-color: #444887dd; */
+}
+
+.movieCard>img {
+    height: 57%;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.deleteMovieBtn{
+    padding: 5px 20px;
+    border: 2px solid tomato;
+    border-radius: 7px;
+    cursor: pointer;
+    background: none;
+    font-weight: bold;
+    transition: all .2s ease-in-out;
+    color: tomato;
+}
+.deleteMovieBtn:hover {
+    top: -5px;
+    border-color: #706d6d;
+    transform: translate(0, -5px);
+}
+/* <----------------------------> */
+
+/* <--------Modal---------> */
+.modal__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.modal__container {
+    background: #fff;
+    display: flex;
+    box-sizing: content-box;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    max-width: 70%;
+    padding: 30px;
+    border-radius: 4px;
+    position: relative;
+    transform: translateY(-100%);
+    transition: all .3s ease-in-out;
+}
+
+.modal__container button.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.modal__container button.close:hover {
+    color: #6B46C1;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal__wrapper.active .modal__container {
+    transform: translateY(0px);
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#createPLForm{
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#createPLForm>input,#createPLForm>select{
+    padding: 10px 15px;
+    border: none;
+    background-color: #deafe4a0;
+    border-radius: 8px;
+}
+
+#createPLForm>input[type=submit]{
+    background-color: #286aef;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+#createPLForm>input[type=submit]:hover{
+    background-color: #1345a8;
+}
+
+#closeBtn {
+
+    background-color: #f33030;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    /* margin-top: 30px; */
+    z-index: 1;
+}
+
+#closeBtn:hover {
+    background-color: #ff0000;
+}
+
+#modal__container p {
+    margin: 5px;
+}
+/* <----------------------> */
+
+
+
+
+
+
+/* <------Footer-----------> */
+footer {
+    margin: 10px 0;
+    text-align: center;
+}
+/* <-----------------------> */
