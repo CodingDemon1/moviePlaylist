@@ -226,6 +226,9 @@ function displayMoviesData(data) {
 function deletePlaylist(id) {
 	fetch(`${baseURL}/playlist/deletePL/${id}`, {
 		method: "DELETE",
+		headers: {
+			Auth: token,
+		},
 	})
 		.then((res) => res.json())
 		.then((result) => {
