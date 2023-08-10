@@ -1,4 +1,4 @@
-const API_Movie_Url = "http://www.omdbapi.com/?i=tt3896198&apikey=851bdde1&s=";
+const API_Movie_Url = "https://www.omdbapi.com/?i=tt3896198&apikey=851bdde1&s=";
 const baseURL = "https://shy-gray-butterfly-sock.cyclic.app";
 
 const mainContainer = document.getElementById("mainContainer");
